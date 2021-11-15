@@ -1,7 +1,7 @@
 {
   "name": "mikha-dev/dcat-site-config",
-  "description": "",
-  "alias": "Dcat",
+  "description": "Site configuration, replaces env and config values",
+  "alias": "Site Config",
   "type": "library",
   "keywords": [
     "dcat-admin",
