@@ -28,6 +28,9 @@ class SiteConfigForm extends Form
     public function form()
     {
 
+        $this->text('admin_powered')
+            ->default(config('admin.powered'));
+
         $this->text('admin_title')
             ->default(config('admin.title'));
 
