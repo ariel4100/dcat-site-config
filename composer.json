@@ -1,0 +1,34 @@
+{
+  "name": "mikha-dev/site-config",
+  "description": "",
+  "alias": "Dcat",
+  "type": "library",
+  "keywords": [
+    "dcat-admin",
+    "extension"
+  ],
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "mikha",
+      "email": "mikha.dev@gmail.com"
+    }
+  ],
+  "require": {
+    "php": ">=7.4.0",
+    "mikha-dev/dcat-admin": "*"
+  },
+  "autoload": {
+    "psr-4": {
+      "Dcat\\Admin\\": "src/"
+    }
+  },
+  "extra": {
+    "dcat-admin": "Dcat\\Admin\\SiteConfigServiceProvider",
+    "laravel": {
+      "providers": [
+        "Dcat\\Admin\\SiteConfigServiceProvider"
+      ]
+    }
+  }
+}
