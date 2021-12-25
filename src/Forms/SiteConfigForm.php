@@ -42,7 +42,7 @@ class SiteConfigForm extends Form
         $this->switch('admin_layout_horizontal-menu', Support::trans('main.top_menu'))->default(config('admin.layout.horizontal-menu'));
 
         $this->radio('admin_layout_sidebar-style', Support::trans('main.menu_style'))
-            ->options(['dark' => 'Dark', 'light' => 'Light'])
+            ->options(['light' => 'Light', 'dark' => 'Dark'])
             ->default(config('admin.layout.sidebar-style'));
 
         $this->radio('admin_layout_color', Support::trans('main.base_color'))
