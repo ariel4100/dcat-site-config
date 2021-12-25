@@ -2,6 +2,7 @@
 
 namespace Dcat\Admin\Forms;
 
+use Dcat\Admin\Support;
 use Dcat\Admin\Widgets\Form;
 use Illuminate\Support\Str;
 
@@ -16,10 +17,11 @@ class SiteConfigForm extends Form
         }
 
         admin_setting($data);
+
         return $this
             ->response()
-            ->success('Site configuration successfully updated!')
-            ->refresh();
+            ->location(session()->previousUrl())
+            ->success(Support::trans('main.updated_success'));
     }
 
     /**
@@ -28,25 +30,38 @@ class SiteConfigForm extends Form
     public function form()
     {
 
-        $this->text('admin_powered')
+        $this->text('admin_powered', Support::trans('main.powered_by'))
             ->default(config('admin.powered'));
 
-        $this->text('admin_name')
+        $this->text('admin_name', Support::trans('main.name'))
             ->default(config('admin.name'));
 
-        $this->text('admin_title')
+        $this->text('admin_title', Support::trans('main.title'))
             ->default(config('admin.title'));
 
-        $this->image('admin_logo-image', 'Logo')
+        $this->switch('admin_layout_horizontal-menu', Support::trans('main.top_menu'))->default(config('admin.layout.horizontal-menu'));
+
+        $this->radio('admin_layout_sidebar-style', Support::trans('main.menu_style'))
+            ->options(['dark' => 'Dark', 'light' => 'Light'])
+            ->default(config('admin.layout.sidebar-style'));
+
+        $this->radio('admin_layout_color', Support::trans('main.base_color'))
+            ->options(['default' => 'Default', 'blue' => 'Blue', 'blue-light' => 'Light Blue', 'green' => 'Green', 'black' => 'Black'])
+            ->default(config('admin.layout.color'));
+
+        $this->radio('admin_layout_navbar-color', Support::trans('main.nav_bar_color'))
+            ->options(['' =>'Default', 'bg-primary' => 'Primary', 'bg-info' => 'Blue', 'bg-warning' => 'Orange', 'bg-success' => 'Green', 'bg-dark' => 'Dark'])
+            ->default(config('admin.layout.navbar-color'));
+
+        $this->image('admin_logo-image', Support::trans('main.logo'))
             ->autoUpload()
             ->uniqueName()
             ->default(config('admin.logo-image'));
 
-        $this->image('admin_logo-mini', 'Logo Mini')
+        $this->image('admin_logo-mini', Support::trans('main.logo_mini'))
             ->autoUpload()
             ->uniqueName()
             ->default(config('admin.logo-mini'));
 
-        $this->switch('admin_layout_horizontal-menu', 'Top Menu')->default(config('admin.layout.horizontal-menu'));
     }
 }

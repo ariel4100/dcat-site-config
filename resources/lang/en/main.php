@@ -1,15 +1,14 @@
 <?php
 return [
-     'site_url' =>'site domain name',
-     'site_title' =>'site title',
-     'site_logo_text' =>'LOGO (text)',
-     'site_logo' =>'LOGO',
-     'site_logo_mini' =>'LOGO (miniature)',
-     'site_debug' =>'Debug mode',
-     'footer_remove' =>'Remove footer',
-     'select_create' =>'Quickly create options',
-     'theme_color' =>'Theme color',
-     'sidebar_style' =>'Menu style',
-     'site_lang' =>'language',
-     'grid_row_actions_right' =>'Form row action button right align'
+     'site_config' =>'Site Configuration',
+     'updated_success' => 'Successfully updated',
+     'powered_by' => 'Powered by text',
+     'name' => 'Site Name',
+     'title' => 'Site Title',
+     'top_menu' => 'Top Menu?',
+     'menu_style' => 'Menu Style',
+     'base_color' => 'Base Color',
+     'nav_bar_color' => 'Top Bar Color',
+     'logo' => 'Logo',
+     'logo_mini' => 'Logo Mini',
 ];
