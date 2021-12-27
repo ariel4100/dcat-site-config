@@ -10,7 +10,7 @@ class MiddleInjectDcatPlus
     public function handle(Request $request, Closure $next)
     {
 
-        config(admin_setting()->toArray());
+//        config(admin_setting()->toArray());
 
         return $next($request);
     }
