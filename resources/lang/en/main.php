@@ -11,4 +11,6 @@ return [
      'nav_bar_color' => 'Top Bar Color',
      'logo' => 'Logo',
      'logo_mini' => 'Logo Mini',
+     'allow_register' => 'Allow Registration',
+     'login_image' => 'Login Image'
 ];

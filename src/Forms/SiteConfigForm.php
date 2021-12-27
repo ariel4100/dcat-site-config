@@ -64,7 +64,7 @@ class SiteConfigForm extends Form
             ->uniqueName()
             ->default(config('admin.logo-mini'));
 
-        $this->image('admin_login-image', Support::trans('main.login_iamge'))
+        $this->image('admin_login-image', Support::trans('main.login_image'))
             ->autoUpload()
             ->uniqueName()
             ->default(config('admin.login-image'));
