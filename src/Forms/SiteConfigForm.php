@@ -40,7 +40,7 @@ class SiteConfigForm extends Form
             ->default(config('admin.title'));
 
         $this->switch('admin_layout_horizontal-menu', Support::trans('main.top_menu'))->default(config('admin.layout.horizontal-menu'));
-        $this->switch('admin_allow-register', Support::trans('main.allow_register'))->default(config('admin_allow-register'));
+        $this->switch('admin_allow-register', Support::trans('main.allow_register'))->default(config('admin.allow-register'));
 
         $this->radio('admin_layout_sidebar-style', Support::trans('main.menu_style'))
             ->options(['light' => 'Light', 'dark' => 'Dark'])
