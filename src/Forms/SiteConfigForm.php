@@ -41,10 +41,15 @@ class SiteConfigForm extends Form
 
         $this->switch('admin_layout_horizontal-menu', Support::trans('main.top_menu'))->default(config('admin.layout.horizontal-menu'));
         $this->switch('admin_allow-register', Support::trans('main.allow_register'))->default(config('admin.allow-register'));
+        $this->switch('admin_allow-reset-password', Support::trans('main.allow_reset_password'))->default(config('admin.allow-reset-password'));
 
         $this->radio('admin_layout_sidebar-style', Support::trans('main.menu_style'))
             ->options(['light' => 'Light', 'dark' => 'Dark'])
             ->default(config('admin.layout.sidebar-style'));
+
+        $this->radio('admin_login-layout', Support::trans('main.login_layout'))
+            ->options(['primary' => 'Primary', 'left' => 'Left Aligned'])
+            ->default(config('admin.login-layout'));
 
         $this->radio('admin_layout_color', Support::trans('main.base_color'))
             ->options(['default' => 'Default', 'blue' => 'Blue', 'blue-light' => 'Light Blue', 'green' => 'Green', 'black' => 'Black'])

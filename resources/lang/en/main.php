@@ -12,5 +12,7 @@ return [
      'logo' => 'Logo',
      'logo_mini' => 'Logo Mini',
      'allow_register' => 'Allow Registration',
-     'login_image' => 'Login Image'
+     'allow_reset_password' => 'Allow Reset Password',
+     'login_image' => 'Login Image',
+     'login_layout' => 'Login Page Layout'
 ];
