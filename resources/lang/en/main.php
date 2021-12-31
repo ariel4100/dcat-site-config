@@ -14,5 +14,6 @@ return [
      'allow_register' => 'Allow Registration',
      'allow_reset_password' => 'Allow Reset Password',
      'login_image' => 'Login Image',
-     'login_layout' => 'Login Page Layout'
+     'login_layout' => 'Login Page Layout',
+     'paginate_default' => 'Number of Items per Page'
 ];
