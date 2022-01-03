@@ -20,7 +20,7 @@ class SiteConfigForm extends Form
 
         return $this
             ->response()
-            ->location(session()->previousUrl())
+            ->location(admin_url('site-settings'))
             ->success(Support::trans('main.updated_success'));
     }
 
