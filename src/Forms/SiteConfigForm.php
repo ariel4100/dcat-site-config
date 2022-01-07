@@ -43,6 +43,10 @@ class SiteConfigForm extends Form
         $this->switch('admin_allow-register', Support::trans('main.allow_register'))->default(config('admin.allow-register'));
         $this->switch('admin_allow-reset-password', Support::trans('main.allow_reset_password'))->default(config('admin.allow-reset-password'));
 
+        $this->switch('admin_recaptch-enabled', Support::trans('main.recaptch_enabled'))->default(config('admin.recaptch-enabled'));
+        $this->text('admin_recaptch-site', Support::trans('main.recaptch_site'))->default(config('admin.recaptch-site'));
+        $this->text('admin_recaptch-secret', Support::trans('main.recaptch_secret'))->default(config('admin.recaptch-secret'));
+
         $this->radio('admin_layout_sidebar-style', Support::trans('main.menu_style'))
             ->options(['light' => 'Light', 'dark' => 'Dark'])
             ->default(config('admin.layout.sidebar-style'));

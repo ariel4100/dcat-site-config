@@ -15,5 +15,9 @@ return [
      'allow_reset_password' => 'Allow Reset Password',
      'login_image' => 'Login Image',
      'login_layout' => 'Login Page Layout',
-     'paginate_default' => 'Number of Items per Page'
+     'paginate_default' => 'Number of Items per Page',
+
+     'recaptch_enabled' => 'reCaptcha Enabled',
+     'recaptch_site' => 'reCaptcha Site',
+     'recaptch_secret' => 'reCaptcha Secret',
 ];
