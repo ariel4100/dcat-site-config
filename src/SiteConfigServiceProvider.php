@@ -2,9 +2,6 @@
 
 namespace Dcat\Admin;
 
-use Dcat\Admin\Http\Middleware\AfterInjectDcatPlus;
-use Dcat\Admin\Http\Middleware\BeforeInjectDcatPlus;
-use Dcat\Admin\Http\Middleware\MiddleInjectDcatPlus;
 use Dcat\Admin\Extend\ServiceProvider as BaseServiceProvider;
 
 /**
@@ -13,18 +10,6 @@ use Dcat\Admin\Extend\ServiceProvider as BaseServiceProvider;
  */
 class SiteConfigServiceProvider extends BaseServiceProvider
 {
-    protected $middleware = [
-        'before' => [
-            BeforeInjectDcatPlus::class,
-        ],
-        'middle' => [
-            MiddleInjectDcatPlus::class,
-        ],
-        'after' => [
-            AfterInjectDcatPlus::class,
-        ]
-    ];
-
     protected $menu = [
         [
             'title' => 'Site Config',
