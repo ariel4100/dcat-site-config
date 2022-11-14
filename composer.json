@@ -16,7 +16,7 @@
   ],
   "require": {
     "php": ">=7.4.0",
-    "mikha-dev/dcat-admin": "*"
+    "ariel4100/dcat-admin": "*"
   },
   "autoload": {
     "psr-4": {
