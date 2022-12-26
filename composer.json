@@ -16,7 +16,7 @@
   ],
   "require": {
     "php": ">=7.4.0",
-    "ariel4100/dcat-admin": "dev-main"
+    "ariel4100/dcat-admin": "*"
   },
   "autoload": {
     "psr-4": {
